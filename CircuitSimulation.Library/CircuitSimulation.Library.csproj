@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BADA4F8D-7764-401B-8B3B-75FFB188F293}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CircuitSimulation.Library</RootNamespace>
+    <AssemblyName>CircuitSimulation.Library</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CircuitBuilders\AndGateBuilder.cs" />
+    <Compile Include="CircuitBuilders\BufferBuilder.cs" />
+    <Compile Include="CircuitBuilders\CircuitBuilder.cs" />
+    <Compile Include="CircuitBuilders\DiodeBuilder.cs" />
+    <Compile Include="CircuitBuilders\FlipFlopBuilder.cs" />
+    <Compile Include="CircuitBuilders\FreeInputBuilder.cs" />
+    <Compile Include="CircuitBuilders\FreeOutputBuilder.cs" />
+    <Compile Include="CircuitBuilders\GeneratorBuilder.cs" />
+    <Compile Include="CircuitBuilders\IntegratedCircuitBuilder.cs" />
+    <Compile Include="CircuitBuilders\SwitchBuilder.cs" />
+    <Compile Include="CircuitSimulator.cs" />
+    <Compile Include="Data\AndGateData.cs" />
+    <Compile Include="Data\BufferData.cs" />
+    <Compile Include="Data\CircuitData.cs" />
+    <Compile Include="Data\CircuitDataReader.cs" />
+    <Compile Include="Data\CircuitDataWriter.cs" />
+    <Compile Include="Data\DiodeData.cs" />
+    <Compile Include="Data\ElementData.cs" />
+    <Compile Include="Data\EventData.cs" />
+    <Compile Include="Data\FlipFlopData.cs" />
+    <Compile Include="Data\FreeInputData.cs" />
+    <Compile Include="Data\FreeOutputData.cs" />
+    <Compile Include="Data\GateData.cs" />
+    <Compile Include="Data\GeneratorData.cs" />
+    <Compile Include="Data\InputChangedData.cs" />
+    <Compile Include="Data\InputData.cs" />
+    <Compile Include="Data\IntegratedCircuitData.cs" />
+    <Compile Include="Data\NandGateData.cs" />
+    <Compile Include="Data\NorGateData.cs" />
+    <Compile Include="Data\NotGateData.cs" />
+    <Compile Include="Data\OneInputGateData.cs" />
+    <Compile Include="Data\OrGateData.cs" />
+    <Compile Include="Data\OutputChangedData.cs" />
+    <Compile Include="Data\OutputData.cs" />
+    <Compile Include="Data\SignalType.cs" />
+    <Compile Include="Data\SimulationData.cs" />
+    <Compile Include="Data\SocketData.cs" />
+    <Compile Include="Data\SwitchData.cs" />
+    <Compile Include="Data\TwoInputGateData.cs" />
+    <Compile Include="Data\WireData.cs" />
+    <Compile Include="CircuitBuilders\ElementBuilder.cs" />
+    <Compile Include="Data\XnorGateData.cs" />
+    <Compile Include="Data\XorGateData.cs" />
+    <Compile Include="Elements\AndGate.cs" />
+    <Compile Include="Circuit.cs" />
+    <Compile Include="Clock.cs" />
+    <Compile Include="Elements\Buffer.cs" />
+    <Compile Include="Elements\Diode.cs" />
+    <Compile Include="Elements\Element.cs" />
+    <Compile Include="Elements\FreeInput.cs" />
+    <Compile Include="Elements\FreeOutput.cs" />
+    <Compile Include="Elements\Generator.cs" />
+    <Compile Include="Elements\IntegratedCircuit.cs" />
+    <Compile Include="Elements\Switch.cs" />
+    <Compile Include="Events\DiodeInputChanged.cs" />
+    <Compile Include="Events\GateOutputChanged.cs" />
+    <Compile Include="Events\IntegratedCircuitInputChanged.cs" />
+    <Compile Include="Events\IntegratedCircuitOutputChanged.cs" />
+    <Compile Include="Events\LightChanged.cs" />
+    <Compile Include="Events\Event.cs" />
+    <Compile Include="EventQueue.cs" />
+    <Compile Include="Elements\XnorGate.cs" />
+    <Compile Include="Elements\XorGate.cs" />
+    <Compile Include="Elements\FlipFlop.cs" />
+    <Compile Include="Elements\Gate.cs" />
+    <Compile Include="CircuitBuilders\ExnorGateBuilder.cs" />
+    <Compile Include="CircuitBuilders\ExorGateBuilder.cs" />
+    <Compile Include="CircuitBuilders\IElementBuilder.cs" />
+    <Compile Include="Events\GeneratorOutputChanged.cs" />
+    <Compile Include="Data\LightChangedData.cs" />
+    <Compile Include="Events\GeneratorChanges.cs" />
+    <Compile Include="Events\SwitchOutputChanged.cs" />
+    <Compile Include="InitialGeneratorState.cs" />
+    <Compile Include="InitialSwitchState.cs" />
+    <Compile Include="SimulationResultsBuilders\DiodeInputChangedBuilder.cs" />
+    <Compile Include="SimulationResultsBuilders\EventDataBuilder.cs" />
+    <Compile Include="SimulationResultsBuilders\GateOutputChangedBuilder.cs" />
+    <Compile Include="SimulationResultsBuilders\GeneratorOutputChangedBuilder.cs" />
+    <Compile Include="SimulationResultsBuilders\IEventDataBuilder.cs" />
+    <Compile Include="ImmediateSimulation.cs" />
+    <Compile Include="Input.cs" />
+    <Compile Include="Events\GateInput1Changed.cs" />
+    <Compile Include="Events\GateInput2Changed.cs" />
+    <Compile Include="Events\GateInputChanged.cs" />
+    <Compile Include="Elements\NandGate.cs" />
+    <Compile Include="Elements\NorGate.cs" />
+    <Compile Include="Elements\NotGate.cs" />
+    <Compile Include="Elements\OneInputGate.cs" />
+    <Compile Include="Elements\OrGate.cs" />
+    <Compile Include="ISimulation.cs" />
+    <Compile Include="CircuitBuilders\NandGateBuilder.cs" />
+    <Compile Include="CircuitBuilders\NorGateBuilder.cs" />
+    <Compile Include="CircuitBuilders\NotGateBuilder.cs" />
+    <Compile Include="CircuitBuilders\OrGateBuilder.cs" />
+    <Compile Include="Output.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Signal.cs" />
+    <Compile Include="Simulation.cs" />
+    <Compile Include="SimulationResultsBuilders\GateInput1ChangedBuilder.cs" />
+    <Compile Include="SimulationResultsBuilders\GateInput2ChangedBuilder.cs" />
+    <Compile Include="SimulationResultsBuilders\GateInputChangedBuilder.cs" />
+    <Compile Include="SimulationResultsBuilders\IntegratedCircuitInputChangedBuilder.cs" />
+    <Compile Include="SimulationResultsBuilders\IntegratedCircuitOutputChangedBuilder.cs" />
+    <Compile Include="SimulationResultsBuilders\LightChangedBuilder.cs" />
+    <Compile Include="SimulationResultsBuilders\SimulationDataBuilder.cs" />
+    <Compile Include="SimulationDataWriter.cs" />
+    <Compile Include="SimulationException.cs" />
+    <Compile Include="SimulationResultsBuilders\GeneratorChanges.cs" />
+    <Compile Include="SimulationResultsBuilders\SwitchOutputChangedBuilder.cs" />
+    <Compile Include="SimulationStepEventArgs.cs" />
+    <Compile Include="Socket.cs" />
+    <Compile Include="EventQueueForSingleTime.cs" />
+    <Compile Include="Elements\TwoInputGate.cs" />
+    <Compile Include="Wire.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Elements\ElementDiagram.cd" />
+    <None Include="SignalDiagram.cd" />
+    <None Include="SocketDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CircuitSimulation.Library.Elements.Element">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAgAAAAIAAAEAAAABAAAAgA=</HashCode>
+      <FileName>Elements\Element.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CircuitSimulation.Library.Elements.Gate">
+    <Position X="4.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Elements\Gate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CircuitSimulation.Library.Elements.OneInputGate">
+    <Position X="3.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAgAEAAAAEAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Elements\OneInputGate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CircuitSimulation.Library.Elements.TwoInputGate">
+    <Position X="6" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAgAAAAAAEAAAABAAAAAACAAAAAA=</HashCode>
+      <FileName>Elements\TwoInputGate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CircuitSimulation.Library.Elements.NotGate">
+    <Position X="3.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Elements\NotGate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CircuitSimulation.Library.Elements.AndGate">
+    <Position X="2" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Elements\AndGate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CircuitSimulation.Library.Elements.OrGate">
+    <Position X="3.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Elements\OrGate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CircuitSimulation.Library.Elements.NandGate">
+    <Position X="5.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Elements\NandGate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CircuitSimulation.Library.Elements.NorGate">
+    <Position X="7.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Elements\NorGate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CircuitSimulation.Library.Wire">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAgAAAAIAIAAAAKAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Wire.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CircuitSimulation.Library.Elements.ExorGate">
+    <Position X="9" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Elements\ExorGate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CircuitSimulation.Library.Elements.ExnorGate">
+    <Position X="10.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Elements\ExnorGate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CircuitSimulation.Library.Simulation">
+    <Position X="9.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgBAAAACABAAAAAQAAAAAAAAAAAQAACkAAAAAA=</HashCode>
+      <FileName>Simulation.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CircuitSimulation.Library.Clock">
+    <Position X="11.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgEAAABAAAgAAAAAA=</HashCode>
+      <FileName>Clock.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

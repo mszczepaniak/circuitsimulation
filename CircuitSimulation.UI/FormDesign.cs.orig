@@ -1,0 +1,141 @@
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
+using CircuitSimulation.UI.Commands;
+using WindowsFormsApplication1;
+
+namespace CircuitSimulation.UI
+{
+    public partial class FormDesign : FormBase
+    {
+        private readonly MainForm mainForm;
+        ImageList largeImageSource = new ImageList();
+<<<<<<< HEAD
+
+        private string fileName;
+
+        public string FileName
+        {
+            get { return fileName; }
+            set
+            {
+                fileName = value;
+                RefreshTitle();
+            }
+        }
+
+        public bool IsModified { get; set; }
+
+        public FormDesign()
+=======
+        // all commands as the properties
+        public SimulateCommand SimulateCommand { get; private set; }
+        public FormDesign(MainForm mainForm)
+>>>>>>> 48775eb94cdf1a15474205cd5a2b72f098708b59
+        {
+            this.mainForm = mainForm;
+            InitializeComponent();
+<<<<<<< HEAD
+
+            Closing += FormDesign_Closing;
+
+=======
+            InitializeCommands();
+>>>>>>> 48775eb94cdf1a15474205cd5a2b72f098708b59
+            // adjusting an image list
+            largeImageSource.ImageSize = new Size(48, 32);
+            largeImageSource.Images.Add(Images.and);
+            largeImageSource.Images.Add(Images.or);
+            largeImageSource.Images.Add(Images.not);
+            largeImageSource.Images.Add(Images.nor);
+            largeImageSource.Images.Add(Images.nand);
+            largeImageSource.Images.Add(Images.srLatch);
+            largeImageSource.Images.Add(Images.xnor);
+            largeImageSource.Images.Add(Images.xor);
+            
+            // setting the image list as the source of large images
+            listViewElements.LargeImageList = largeImageSource;
+            // assigning a large image to a group caption
+            ListViewGroup listViewGroup = listViewElements.Groups[0];
+        }
+
+        private void FormDesign_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (!IsModified)
+                return;
+
+            var result = DialogUtils.ConfirmSavingChanges(MainForm, fileName);
+
+            if (result == DialogResult.Cancel)
+                e.Cancel = true;
+
+            if (result == DialogResult.Yes)
+                MainForm.FileSaveCommand.Execute();
+        }
+
+        private void RefreshTitle()
+        {
+            Text = "Circuit - " + fileName + (IsModified ? "*" : "");
+        }
+        private void InitializeCommands()
+        {
+            SimulateCommand = new SimulateCommand(mainForm);
+            BindItem(buttonSimulate, SimulateCommand);
+        }
+        private void BindItem(ButtonWithImage buttonSimulate, CommandBase command)
+        {
+            buttonSimulate.Click += (sender, args) => command.Execute();
+            buttonSimulate.Enabled = command.IsEnabled;
+        }
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void fullfillListView()
+        {
+
+        }
+
+        private void listView1_ItemDrag(object sender, ItemDragEventArgs e)
+        {
+            DoDragDrop(listViewElements.SelectedItems[0].Tag, DragDropEffects.Move);
+        }
+
+        private void panel1_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Move;
+        }
+
+        private int lastAddedElementId = 0;
+
+        private void panel1_DragDrop(object sender, DragEventArgs e)
+        {
+            if (!((string) e.Data.GetData(DataFormats.StringFormat)).StartsWith("Element"))
+            {
+                var element = new Element();
+                element.Parent = panelMain;
+                element.LabelText = (string) e.Data.GetData(DataFormats.StringFormat);
+                var position = panelMain.PointToClient(new Point(e.X, e.Y));
+                element.Left = position.X;
+                element.Top = position.Y;
+                element.Name = "Element" + lastAddedElementId++;
+                panelMain.Controls.Add(element);
+            }
+        }
+
+        private void panel1_DragOver(object sender, DragEventArgs e)
+        {
+            var data = (string) e.Data.GetData(DataFormats.StringFormat);
+            if (data.StartsWith("Element"))
+            {
+                var element = panelMain.Controls.Find(data, false)[0];
+                var positionInPanel = panelMain.PointToClient(new Point(e.X, e.Y));
+                var positionInElement = element.PointToClient(new Point(e.X, e.Y));
+                element.Left = positionInPanel.X;
+                element.Top = positionInPanel.Y;
+            }
+        }
+
+    }
+}

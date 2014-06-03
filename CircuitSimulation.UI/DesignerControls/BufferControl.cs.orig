@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace CircuitSimulation.UI.DesignerControls
+{
+    public partial class BufferControl : CircuitSimulation.UI.DesignerControls.CircuitElementControl
+    {
+        public BufferControl(CircuitControl designer) : base(designer)
+        {
+            InitializeComponent();
+        }
+
+        protected override Image GetImage()
+        {
+            return Images.bufferTrans;
+        }
+
+        protected override List<InputSocketControl> CreateInputs()
+        {
+            var input = new InputSocketControl(Designer, this) { Left = 0, Top = 21 };
+
+            var result = new List<InputSocketControl>();
+            result.Add(input);
+
+            return result;
+        }
+
+        protected override List<OutputSocketControl> CreateOutputs()
+        {
+            var output = new OutputSocketControl(Designer, this) {Left = 98, Top = 21};
+
+            var result = new List<OutputSocketControl>();
+            result.Add(output);
+            return result;
+        }
+    }
+}

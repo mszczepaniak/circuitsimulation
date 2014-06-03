@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{49944551-6ECA-4E66-881B-7B4403604DB6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CircuitSimulation.UI</RootNamespace>
+    <AssemblyName>CircuitSimulation.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ButtonWithImage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Commands\EditDeleteCommand.cs" />
+    <Compile Include="DesignerControls\AndGateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignerControls\AndGateControl.Designer.cs">
+      <DependentUpon>AndGateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerControls\BufferControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignerControls\BufferControl.Designer.cs">
+      <DependentUpon>BufferControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerControls\CircuitControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignerControls\CircuitControl.Designer.cs">
+      <DependentUpon>CircuitControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\SimulateCommand.cs" />
+    <Compile Include="DesignerControls\DiodeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignerControls\DiodeControl.Designer.cs">
+      <DependentUpon>DiodeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerControls\FreeInputControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignerControls\FreeInputControl.Designer.cs">
+      <DependentUpon>FreeInputControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerControls\FreeOutputControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignerControls\FreeOutputControl.Designer.cs">
+      <DependentUpon>FreeOutputControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerControls\FreeSocketControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignerControls\FreeSocketControl.Designer.cs">
+      <DependentUpon>FreeSocketControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerControls\GeneratorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignerControls\GeneratorControl.Designer.cs">
+      <DependentUpon>GeneratorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerControls\IntegratedCircuitControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignerControls\IntegratedCircuitControl.Designer.cs">
+      <DependentUpon>IntegratedCircuitControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerControls\NandGateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignerControls\NandGateControl.Designer.cs">
+      <DependentUpon>NandGateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerControls\NorGateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignerControls\NorGateControl.Designer.cs">
+      <DependentUpon>NorGateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerControls\NotGateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignerControls\NotGateControl.Designer.cs">
+      <DependentUpon>NotGateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerControls\OrGateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignerControls\OrGateControl.Designer.cs">
+      <DependentUpon>OrGateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerControls\SrLatchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignerControls\SrLatchControl.Designer.cs">
+      <DependentUpon>SrLatchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerControls\SwitchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignerControls\SwitchControl.Designer.cs">
+      <DependentUpon>SwitchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerControls\WireControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignerControls\WireControl.Designer.cs">
+      <DependentUpon>WireControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerControls\XnorGateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignerControls\XnorGateControl.Designer.cs">
+      <DependentUpon>XnorGateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerControls\XorGateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignerControls\XorGateControl.Designer.cs">
+      <DependentUpon>XorGateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUtils.cs" />
+    <Compile Include="DesignerControls\SocketControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignerControls\SocketControl.Designer.cs">
+      <DependentUpon>SocketControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbout.Designer.cs">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\EditCopyCommand.cs" />
+    <Compile Include="Commands\EditCutCommand.cs" />
+    <Compile Include="Commands\EditPasteCommand.cs" />
+    <Compile Include="Commands\FileExitCommand.cs" />
+    <Compile Include="Commands\FileNewCircuitCommand.cs" />
+    <Compile Include="Commands\FileOpenCircuitCommand.cs" />
+    <Compile Include="Commands\FileSaveAsCommand.cs" />
+    <Compile Include="Commands\FileSaveCommand.cs" />
+    <Compile Include="Commands\HelpAboutCommand.cs" />
+    <Compile Include="Commands\CommandBase.cs" />
+    <Compile Include="Commands\ToolsOptionsCommand.cs" />
+    <Compile Include="DesignerControls\CircuitElementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignerControls\CircuitElementControl.designer.cs">
+      <DependentUpon>CircuitElementControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDesign.designer.cs">
+      <DependentUpon>FormDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesignBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDesignBase.Designer.cs">
+      <DependentUpon>FormDesignBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormName.Designer.cs">
+      <DependentUpon>FormName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOptions.Designer.cs">
+      <DependentUpon>FormOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSimulationGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSimulationGraph.Designer.cs">
+      <DependentUpon>FormSimulationGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Images.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Images.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerControls\InputSocketControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignerControls\InputSocketControl.Designer.cs">
+      <DependentUpon>InputSocketControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerControls\OutputSocketControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignerControls\OutputSocketControl.Designer.cs">
+      <DependentUpon>OutputSocketControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormSimulation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSimulation.Designer.cs">
+      <DependentUpon>FormSimulation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimulationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SimulationControl.Designer.cs">
+      <DependentUpon>SimulationControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DesignerControls\CircuitControl.resx">
+      <DependentUpon>CircuitControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignerControls\SocketControl.resx">
+      <DependentUpon>SocketControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignerControls\InputSocketControl.resx">
+      <DependentUpon>InputSocketControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignerControls\WireControl.resx">
+      <DependentUpon>WireControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAbout.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignerControls\CircuitElementControl.resx">
+      <DependentUpon>CircuitElementControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDesign.resx">
+      <DependentUpon>FormDesign.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDesignBase.resx">
+      <DependentUpon>FormDesignBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormName.resx">
+      <DependentUpon>FormName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOptions.resx">
+      <DependentUpon>FormOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="FormSimulation.resx">
+      <DependentUpon>FormSimulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimulationControl.resx">
+      <DependentUpon>SimulationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\generator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\generatorTrans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\srLatch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\srLatchTrans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FormRunHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\and.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\andTrans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xnor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xnorTrans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\or.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orTrans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xorTrans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nandTrans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\norTrans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buffer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bufferTrans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\not.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notTrans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diodeOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swtichON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swtichONTrans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CircuitSimulation.Library\CircuitSimulation.Library.csproj">
+      <Project>{BADA4F8D-7764-401B-8B3B-75FFB188F293}</Project>
+      <Name>CircuitSimulation.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switchOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switchOffTrans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switchOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switchOnTrans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\integratedCircuit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\integratedCircuitTrans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\input.png" />
+    <Content Include="Resources\inputTrans.png" />
+    <Content Include="Resources\output.png" />
+    <Content Include="Resources\outputTrans.png" />
+    <Content Include="Resources\socket.png" />
+    <Content Include="Resources\socketTrans.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
